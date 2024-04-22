@@ -1,5 +1,5 @@
 :root {
-  --accent-color: rgb(255,255,255);
+  --accent-color: rgb(255, 255, 255);
   --dark-heading: rgb(61, 61, 61);
   --light-text: rgb(114, 114, 114);
   --green: rgb(70, 163, 88);
@@ -51,6 +51,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  transition: all 0.3s ease;
 }
 
 body {
@@ -61,12 +62,139 @@ body {
   color: var(--light-text);
   background-color: var(--accent-color);
 }
-
-.container {
+body .container {
   width: 100%;
   max-width: 1240px;
   padding-left: 20px;
   padding-right: 20px;
   margin-left: auto;
   margin-right: auto;
+}
+body .site-header {
+  padding-top: 25px;
+  padding-bottom: 12px;
+}
+body .site-header .site-header__container {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--green);
+}
+body .site-header .site-header__container .site-header__logo {
+  margin-right: 230px;
+  align-self: flex-start;
+}
+body .site-header .site-header__container .logo {
+  display: flex;
+  flex-shrink: 0;
+  width: 150px;
+}
+body .site-header .site-header__container .logo:hover {
+  opacity: 0.9;
+}
+body .site-header .site-header__container .logo:active {
+  opacity: 0.8;
+}
+body .site-header .site-header__container .sitenav {
+  margin-right: 260px;
+}
+body .site-header .site-header__container .sitenav .sitenav__list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+body .site-header .site-header__container .sitenav .sitenav__list .sitenav__item {
+  padding-bottom: 23px;
+  position: relative;
+}
+body .site-header .site-header__container .sitenav .sitenav__list .sitenav__item:not(:last-child) {
+  margin-right: 49px;
+}
+body .site-header .site-header__container .sitenav .sitenav__list .sitenav__item .sitenav__link {
+  text-decoration: none;
+  text-transform: capitalize;
+  color: var(--dark-heading);
+  font-size: 16px;
+  line-height: 20px;
+}
+body .site-header .site-header__container .sitenav .sitenav__list .sitenav__item--active, body .site-header .site-header__container .sitenav .sitenav__list .sitenav__item:hover {
+  font-weight: 700;
+  background-image: url("../img/active-line.svg");
+  background-repeat: no-repeat;
+  background-position: center 45px;
+}
+body .site-header .site-header__container .site-header__navigation {
+  display: flex;
+  align-items: center;
+  margin-right: 32px;
+}
+body .site-header .site-header__container .site-header__navigation .navigation-btn {
+  border: 0;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+  align-self: flex-start;
+}
+body .site-header .site-header__container .site-header__navigation .search-btn {
+  margin-right: 30px;
+}
+body .site-header .site-header__container .site-header__navigation .search-btn .search-icon {
+  width: 20px;
+  height: 20px;
+}
+body .site-header .site-header__container .site-header__navigation .market-btn {
+  position: relative;
+}
+body .site-header .site-header__container .site-header__navigation .market-btn .market-icon {
+  width: 24px;
+  height: 24px;
+}
+body .site-header .site-header__container .site-header__navigation .market-btn .count {
+  width: 12px;
+  height: 12px;
+  text-align: center;
+  border-radius: 50%;
+  color: var(--accent-color);
+  background-color: var(--green);
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 13px;
+  position: absolute;
+  padding: 1px 3px;
+  top: 2px;
+  left: 17px;
+}
+body .site-header .site-header__container .login-btn {
+  width: 100px;
+  padding: 7px 17px;
+  align-self: flex-start;
+}
+body .site-header .site-header__container .login-btn svg {
+  width: 20px;
+  height: 20px;
+  margin-right: 4px;
+}
+body .site-header .site-header__container .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  outline: none;
+  background-color: var(--green);
+  border-radius: 6px;
+  color: var(--accent-color);
+  text-decoration: none;
+  text-transform: capitalize;
+}
+body .site-header .site-header__container .btn:hover {
+  background-color: transparent;
+  border: 2px solid var(--green);
+  color: var(--green);
+}
+body .site-header .site-header__container .btn:hover svg {
+  color: var(--green);
+}
+body .site-header .site-header__container .btn:active {
+  opacity: 0.7;
 }/*# sourceMappingURL=styles.css.map */
