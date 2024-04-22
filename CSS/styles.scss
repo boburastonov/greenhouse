@@ -73,13 +73,37 @@ body {
   line-height: 24px;
   color: var(--light-text);
   background-color: var(--accent-color);
+  .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    outline: none;
+    background-color: var(--green);
+    border-radius: 6px;
+    color: var(--accent-color);
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 20px;
+    white-space: nowrap;
+    &:hover {
+      background-color: transparent;
+      border: 1px solid var(--green);
+      color: var(--green);
+      svg {
+        color: var(--green);
+      }
+    }
+    &:active {
+      opacity: 0.7;
+    }
+  }
   .container {
     width: 100%;
-    max-width: 1240px;
-    padding-left: 20px;
-    padding-right: 20px;
+    max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
+    overflow: hidden;
   }
   .site-header {
     padding-top: 25px;
@@ -87,7 +111,7 @@ body {
     .site-header__container {
       display: flex;
       align-items: center;
-      border-bottom: 1px solid var(--green);
+      // border-bottom: 1px solid var(--green);
       .site-header__logo {
         margin-right: 230px;
         align-self: flex-start;
@@ -139,6 +163,7 @@ body {
       .site-header__navigation {
         display: flex;
         align-items: center;
+        margin-left: auto;  
         margin-right: 32px;
         .navigation-btn {
           border: 0;
@@ -181,33 +206,74 @@ body {
         width: 100px;
         padding: 7px 17px;
         align-self: flex-start;
+        text-transform: capitalize;
         svg {
           width: 20px;
           height: 20px;
           margin-right: 4px;
         }
       }
-      .btn {
+    }
+  }
+
+  .main-content {
+    flex-grow: 1;
+    .intro {
+      margin-top: 0;
+      margin-bottom: 46px;
+      .intro__container {
         display: flex;
         align-items: center;
-        justify-content: center;
-        border: 0;
-        outline: none;
-        background-color: var(--green);
-        border-radius: 6px;
-        color: var(--accent-color);
-        text-decoration: none;
-        text-transform: capitalize;
-        &:hover {
-          background-color: transparent;
-          border: 2px solid var(--green);
-          color: var(--green);
-          svg {
-            color: var(--green);
+        background-color: rgba(245, 245, 245, 50%);
+        padding-left: 40px;
+        position: relative;
+        padding-right: 20px;
+        background-image: url("../img/little-fl.png");
+        background-repeat: no-repeat;
+        background-position: 70% 94%;
+        .intro__content {
+          margin-right: 16px;
+          .greeting-text {
+            font-weight: 500;
+            line-height: 16px;
+            color: var(--dark-heading);
+            text-transform: uppercase;
+            margin-bottom: 7px;
+          }
+          .intro__heading {
+            font-size: 70px;
+            line-height: 70px;
+            font-weight: 900;
+            color: var(--dark-heading);
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            .mk-text {
+              color: var(--green);
+            }
+          }
+          .intro__text {
+            margin-bottom: 44px;
+          }
+          .intro__btn {
+            width: 140px;
+            padding: 10px 25px;
+            font-weight: 700;
           }
         }
-        &:active {
-          opacity: 0.7;
+        .intro__img--big {
+          width: 518px;
+          margin-right: -40px;
+          margin-bottom: -25px;
+        }
+        .slider-img-wrapper {
+          position: absolute;
+          bottom: 17px;
+          left: 50%;
+          right: 50%;
+          transform: translate(-50%, -50%);
+          .slider__img {
+            width: 40px;
+          }
         }
       }
     }
